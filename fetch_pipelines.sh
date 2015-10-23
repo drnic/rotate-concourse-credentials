@@ -17,5 +17,5 @@ echo Fetching list of pipelines...
 pipelines=$(curl -s -k -u ${username}:${password} ${api}/api/v1/pipelines | jq -r ".[].name")
 for pipeline in ${pipelines[@]}; do
   echo Fetching pipeline $pipeline configuration...
-  fly -t snw c ${pipeline} > ${target_dir}/${pipeline}.yml
+  fly -t ${flytarget} c ${pipeline} > ${target_dir}/${pipeline}.yml
 done

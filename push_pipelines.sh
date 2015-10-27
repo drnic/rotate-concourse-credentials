@@ -2,7 +2,7 @@
 
 flytarget=$1; shift
 if [[ "${flytarget}X" == "X" ]]; then
-  echo "USAGE: ./rotate.sh <fly target alias>"
+  echo "USAGE: ./push_pipelines.sh <fly target alias>"
   exit 1
 fi
 
